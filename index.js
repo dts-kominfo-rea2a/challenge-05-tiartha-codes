@@ -8,29 +8,27 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // ...
 const sorter = (arrName, funcSort) => {
 
-  dataSort = funcSort(arrName);
+  dataToSort = funcSort(arrName);
 
   let newNameArray = [];
-  for (let counter = 0; counter < dataSort.length; counter++) {
-    let iteLoop = ''
-    iteLoop += counter + 1 + '. ' + dataSort[counter];
-    newNameArray.push(iteLoop);
+  for (let counter = 0; counter < dataToSort.length; counter++) {
+    newNameArray.push(`${counter+1}. ${dataToSort[counter]}`)
   }
-  return dataSort;
+  return newNameArray;
 }
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
 const sortAscending = (arrName) => {
-  let dataSort = arrName.sort()
-  return dataSort;
+  let dataToSort = arrName.sort()
+  return dataToSort;
 }
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
 const sortDescending = (arrName) => {
-  let dataSort = arrName.sort().reverse();
-  return dataSort;
+  let dataToSort = arrName.sort().reverse();
+  return dataToSort;
 }
 
 // ! JANGAN DIMODIFIKASI
